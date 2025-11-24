@@ -19,6 +19,7 @@ const projects: Project[] = [
     description:
       "A soft-contrast, card-based marketing page for a product analytics tool, with a hero that showcases live metrics and a clear value-focused story.",
     image: "/projects/pulseboard.png",
+    href: "https://pulseboard-kappa.vercel.app/"
   },
   {
     title: "NimbusPay",
@@ -26,6 +27,7 @@ const projects: Project[] = [
     description:
       "A calm, trust-first site for a payments product — focused on clean typography, clear pricing, and sections that build credibility and reduce friction.",
     image: "/projects/nimbuspay.png",
+    href: "https://nimbus-pay.vercel.app/"
   },
   {
     title: "Mylo",
@@ -33,6 +35,7 @@ const projects: Project[] = [
     description:
       "A playful yet focused landing page for an AI productivity companion, with bold hero hierarchy and subtle motion to highlight key flows.",
     image: "/projects/mylo.png",
+    href: "https://mylo-rho.vercel.app/"
   },
   {
     title: "Aegis",
@@ -40,13 +43,15 @@ const projects: Project[] = [
     description:
       "A structured, confident layout for a security-focused brand, combining strong headings, trust badges, and feature blocks designed for clarity.",
     image: "/projects/aegis.png",
+    href: "https://aegis-ten-ebon.vercel.app/"
   },
   {
-    title: "BrightMind",
+    title: "BrightMinds",
     tag: "Tutoring studio website",
     description:
       "A welcoming site for a 1:1 tutor, highlighting services, testimonials, and scheduling CTAs in a friendly, approachable visual language.",
     image: "/projects/brightmind.png",
+    href: "https://bright-minds-eta.vercel.app/"
   },
   {
     title: "LucidDocs",
@@ -54,6 +59,7 @@ const projects: Project[] = [
     description:
       "A documentation-centric interface that emphasizes readability, content hierarchy, and navigation patterns that scale as knowledge grows.",
     image: "/projects/luciddocs.png",
+    href: "https://lucid-docs-nine.vercel.app/"
   },
   {
     title: "StackPilot",
@@ -63,11 +69,12 @@ const projects: Project[] = [
     image: "/projects/stackpilot.png",
   },
   {
-    title: "Studio+",
+    title: "FitStudio+",
     tag: "Creative studio landing page",
     description:
       "A polished studio homepage highlighting services, process, and selected work — designed as a model for client-facing portfolio sites.",
     image: "/projects/studioplus.png",
+    href: "https://fit-studio-plus.vercel.app/"
   },
 ];
 
@@ -134,7 +141,7 @@ export default function ProjectsPage() {
                   {proj.description}
                 </p>
 
-                {proj.href && (
+                {proj.href ? (
                   <a
                     href={proj.href}
                     target="_blank"
@@ -143,7 +150,9 @@ export default function ProjectsPage() {
                   >
                     View live site
                   </a>
-                )}
+                )
+              :
+              <p className="inline-flex text-sm font-medium text-[#C27A4A] underline-offset-4 hover:underline mt-3">Live link coming soon!</p>}
               </div>
             </motion.article>
           ))}

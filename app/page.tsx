@@ -30,7 +30,7 @@ export default function Home() {
               Frontend developer crafting{" "}
               <span className="relative inline-block">
                 warm, modern web experiences
-                <span className="absolute inset-x-0 bottom-1 h-2 rounded-full bg-[#F2DFCC]" />
+                <span className="absolute inset-x-0 bottom-0 h-2 rounded-full bg-[#F2DFCC]" />
               </span>
               .
             </h1>
